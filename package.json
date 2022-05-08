@@ -46,7 +46,7 @@
   "scripts": {
     "postinstall": "patch-package",
     "start": "set PORT=3010 && react-scripts start",
-    "prebuild": "cp ./README.md ./src/README.md && cp ./LICENSE ./src/LICENSE",
+    "prebuild": "cp ./README.md ./src/README.md && cp ./LICENSE ./src/LICENSE && sed -i \"\" \"s/](src\\/img/](img/g\" src/README.md",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -54,7 +54,8 @@
     "webpack-build": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "git checkout -- .;git clean -dfx;git status"
+    "clean": "git checkout -- .;git clean -dfx;git status",
+    "setup": "npm i --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
