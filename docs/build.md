@@ -32,9 +32,9 @@ Setup your google app with an oauth client ID and API key:
 
 ![image](https://user-images.githubusercontent.com/7715262/167339610-780ba3e2-4ccf-4c90-900b-fcffa281df1b.png)
 
-On the `OAuth consent screen` choose the `See, edit, create, and delete only the specific Google Drive files you use with this app` scope (make sure you've enabled Google Drive API prior to this.
+On the `OAuth consent screen` choose the `See, edit, create, and delete only the specific Google Drive files you use with this app` scope (make sure you've enabled Google Drive API prior to this).
 
-Before building and deploying the app, make sure you have a `.env` file in the root with the API key and the Client ID (you don't need to the Client Secret):
+Before building and deploying the app, make sure you have a `.env` file in the root with the API key and the Client ID (you don't need the Client Secret):
 
 ```
 REACT_APP_GOOGLE_DRIVE_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
