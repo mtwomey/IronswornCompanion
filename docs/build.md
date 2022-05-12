@@ -1,9 +1,19 @@
-# Building for offline use on OSX / Mac using NodeJS 18
+# General
+
+This fork was started mainly to focus on a build tweaked so that everything works when offline.
+
+# Building
+
+The build process has been fully dockerized, you don't even need NodeJS installed. There are docker scripts for building and running the application in dev mode in the `scripts` directory.
 
 ## Building the offline branch 
 
-1. npm run setup
-1. npm run build
+Checkout the offlie branch then use the scripts.
+
+1. `docker-setup` - sets up the codebase and installs NPM modules
+1. `docker-build` - builds the app
+1. `docker-start` - runs the app in dev mode
+1. `docker-clean` - reverts the directory to a clean state
 
 ### What's different
 

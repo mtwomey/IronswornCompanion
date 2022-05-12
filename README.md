@@ -40,19 +40,19 @@ At times the documentation will refer to sections. There are three main sections
 
 The `Header` refers to the top of the page where the `Character Selector` and `Stat Overview` exists.
 
-![image-20210316092433055](src/img/RMaRVJB.png)
+![image-20210316092433055](public/img/RMaRVJB.png)
 
 ### Sidebar
 
 The `Sidebar` refers to the side navigation menu. This section is used for navigating around the app.
 
-![image-20210316092602896](src/img/WHH1Tc9.png)
+![image-20210316092602896](public/img/WHH1Tc9.png)
 
 ### Footer
 
 The `Footer` contains a quick dice roller. This can be used to roll on stats with an action dice vs two challenge dice. When you click `Roll` a box will appear that will state either `Miss`, `Weak Hit`, or `Strong Hit`. Hovering over this box will make a breakdown of the roll appear in a popup. Progression tracks also make use of this, which we will explore later.
 
-![src/img/BxQJXwM.png](src/img/BxQJXwM.png)
+![src/img/BxQJXwM.png](public/img/BxQJXwM.png)
 
 ## Roll Button
 
@@ -68,13 +68,13 @@ Action Rolls will show the details of how the Action Score is created in the `Re
 
 If your character has enough momentum to burn a roll, the option will be displayed on the result preview:
 
-![src/img/0jLp1Gv.png](src/img/0jLp1Gv.png)
+![src/img/0jLp1Gv.png](public/img/0jLp1Gv.png)
 
 clicking the burn button will reset the selected character's momentum.
 
 > Note to make it mechanically possible to burn dice both dice will reset to **0**. This is confusing on the `Result Details` as 0 also represents 10 on a D10. Moreover. since both dice are reset to 0, it will show as a strong hit match. **This should be ignored.**
 
-![src/img/bge5CpV.png](src/img/bge5CpV.png)
+![src/img/bge5CpV.png](public/img/bge5CpV.png)
 
 ---
 
@@ -82,7 +82,7 @@ clicking the burn button will reset the selected character's momentum.
 
 Before discussing the features of the app its important to understand how the oracle works. Throughout the companion you will see the following roll icon in various places:
 
-![image-20210226101636509](src/img/Klb6AUO.png)
+![image-20210226101636509](public/img/Klb6AUO.png)
 
 This icon denotes that you can consult the oracle. Each implementation of the oracle differs between pages. For example, by consulting the oracle during character creation, a random Ironlander name will be generated. On the other hand, by consulting the oracle during world creation, a number of world truths will be defined. As with everything in Ironsworn, if the Oracle's insights are not inline with your version of the Ironlands or provides some contradiction, you can either roll again or carve your own path. You should definitely consult the rules on how exactly to use the Oracle, this app merely takes away the need to cross reference a comprehensive list of roll tables.
 
@@ -92,13 +92,13 @@ This icon denotes that you can consult the oracle. Each implementation of the or
 
 To supplement the oracle implementations on each page, there is also a page dedicated to rolling oracle tables. The Oracles page provides the ability to roll on any oracle table and get a random result. Since there are no dice involved here, the oracle tables can be any size you like.
 
-![src/img/Rz9Pgso.png](src/img/Rz9Pgso.png)
+![src/img/Rz9Pgso.png](public/img/Rz9Pgso.png)
 
 ##### Ask the Oracle
 
 There are five buttons at the top of the oracles page:
 
-![src/img/gIvJTk8.png](src/img/gIvJTk8.png)
+![src/img/gIvJTk8.png](public/img/gIvJTk8.png)
 
 These buttons can be used to ask the oracle a question where you roll depending on the probability of the event happening i.e. finding the key item for your overarching vow in the bottom of your bag, like some miss placed keys is highly unlikely, so you would roll with `small chance` and if you score **91** **or greater** then the answer will be yes **_(don't do this)_**.
 
@@ -146,7 +146,7 @@ To create a character go to the `Characters` page and either enter the details i
 
 There are five stats in total. Each is given a value from 1 to 4 (Level depending). To start, choose a difficulty and place the bonuses for that difficulty across your five stats in any order. You can also roll on the oracle to leave your primary stat choice down to fate. The `Roll Primary Stat` button will choose 1 of the stats at random to be your primary stat `value=3`. You can then enter two 1s and two 2s into the remaining stats.
 
-![src/img/LcqryMA.png](src/img/LcqryMA.png)
+![src/img/LcqryMA.png](public/img/LcqryMA.png)
 
 > **Note: **The roll primary stat button will set a value to 3, if you are playing challenging you should changed the rolled value to 4 and fill in other values as you wish
 
@@ -221,7 +221,7 @@ Once logs are added they will appear in the box above the input box. They will a
 
 The journal screen allows you to take more comprehensive notes than the log allows. This uses a markdown text editor to create rich text notes:
 
-![src/img/5xnOOWo.png](src/img/5xnOOWo.png)
+![src/img/5xnOOWo.png](public/img/5xnOOWo.png)
 
 The editor supports Grammarly, and also supports a wide range of style options that can be entered in various ways.
 
@@ -229,9 +229,9 @@ The editor supports Grammarly, and also supports a wide range of style options t
 
 The editor supports inline additions of popular style items. New lines show a plus icon. Clicking this plus icon or typing a forward slash `/` will bring up a context menu:
 
-![src/img/iLwaoNo.png](src/img/iLwaoNo.png)
+![src/img/iLwaoNo.png](public/img/iLwaoNo.png)
 
-![src/img/6I4rHLa.png](src/img/6I4rHLa.png)
+![src/img/6I4rHLa.png](public/img/6I4rHLa.png)
 
 This can be used to add styled items.
 
@@ -335,7 +335,7 @@ You can Delete locations by clicking on their map marker and then clicking `Dele
 
 Enter the fray describes the action of combat.
 
-![src/img/0e3AJpa.png](src/img/0e3AJpa.png)
+![src/img/0e3AJpa.png](public/img/0e3AJpa.png)
 
 To enter combat, create `Active Foes` by either selecting from the `Category` and `Type` drop boxes or click `Roll Random Foe`. A preview of the foe is shown above the `+ Add Foe` button. Multiple `Active Foes` can be added and each Foe will have an individual `combat track`.
 
@@ -343,7 +343,7 @@ To enter combat, create `Active Foes` by either selecting from the `Category` an
 
 The `Foe Card` provides information and context about your foes:
 
-![image-20210316095147244](src/img/nMwPOyV.png)
+![image-20210316095147244](public/img/nMwPOyV.png)
 
 The title bar of each `Foe Card` contains the `Foe Type` and `Rank` of each Foe. The rank determines how much harm a foe can inflict on a player and also determines the combat progression per harm done. This can be changed with the drop down. The `Foe Card` also contains the page number of the Foe and the source so you can refer to the books for more information.
 
@@ -359,7 +359,7 @@ If the roll is successful you can delete the character and move on. If it is not
 
 The Ironsworn rules allows you to form packs of NPCs that have a single track. This app does not implement packs as such, However, the quick combat window allows you to create foes (or packs) just by name alone and they get a progress track and a rank. Use this function to create a pack of foes:
 
-![src/img/99HkX8B.png](src/img/99HkX8B.png)
+![src/img/99HkX8B.png](public/img/99HkX8B.png)
 
 > For information about **NPC Packs** see **Chapter 5** of the Ironsworn rulebook
 
@@ -411,19 +411,19 @@ Most sections of the companion are just a mechanism to log data. Other than Even
 
 First create a delve site using the interface used throughout the companion.
 
-![src/img/D2WgLTg.png](src/img/D2WgLTg.png)
+![src/img/D2WgLTg.png](public/img/D2WgLTg.png)
 
 One the site has been discovered. It will be selected in the drop down below. Select a site from the drop down and click `Enter The Site`
 
 > You can also delete a site from here.
 
-![src/img/RnAuAqy.png](src/img/RnAuAqy.png)
+![src/img/RnAuAqy.png](public/img/RnAuAqy.png)
 
 ### Renaming a site
 
 You can click on the delve site name and rename it at any point.
 
-![src/img/kliw4QR.png](src/img/kliw4QR.png)
+![src/img/kliw4QR.png](public/img/kliw4QR.png)
 
 ### Exit Site
 
@@ -433,17 +433,17 @@ You can leave the page and come back to a delve site, Leave site is intended for
 
 Click Show Theme/Domain Card to display the reference card as a reference
 
-![src/img/76Z5sZe.png](src/img/76Z5sZe.png)
+![src/img/76Z5sZe.png](public/img/76Z5sZe.png)
 
 Click show Denizen Matrix (this is configured using the [Denizen Config](#denizen-config))
 
-![src/img/D8bpsS0.png](src/img/D8bpsS0.png)
+![src/img/D8bpsS0.png](public/img/D8bpsS0.png)
 
 ### Enter the Delve site
 
 Once you're in the delve site. There are a plethora of controls and features.
 
-![src/img/ZqUBenX.png](src/img/ZqUBenX.png)
+![src/img/ZqUBenX.png](public/img/ZqUBenX.png)
 
 ### Delve the depths
 
@@ -458,15 +458,15 @@ The delve the depths section has a series of boxes that correspond to the levels
 
 4. Reveal Danger has a reveal button that will reveal dangers from the Theme/Domain. If the danger contains the word 'Denizen' it will be replaced with the Denizen's name and a Fight button will be displayed. A `delve deeper` button will also be shown. Clicking `Delve Deeper` will take you back to level 1
 
-   ![src/img/fszigdW.png](src/img/fszigdW.png)
+   ![src/img/fszigdW.png](public/img/fszigdW.png)
 
 5. Find an opportunity box gives you the option to choose an opportunity if you score a strong hit, or will choose one for you on the right type of weak hit. The word denizen is replaced with a denizen name and a fight button is shown (this gives the player the option to fight should they wish to though it would depend on the situation)
 
-   ![src/img/9rapcco.png](src/img/9rapcco.png)
+   ![src/img/9rapcco.png](public/img/9rapcco.png)
 
    6. Some weak hits will roll a path choice, where you can choose to mark progress and go back to level 1 or find an opportunity.
 
-   ![src/img/x3apIs2.png](src/img/x3apIs2.png)
+   ![src/img/x3apIs2.png](public/img/x3apIs2.png)
 
    Throughout this guided play progress is automatically logged. When it is at a high enough level, the `Locate your Objective` progress roll button is available.
 
@@ -482,7 +482,7 @@ This page is essentially a sea of checkboxes. Each checkbox represents a matrix 
 
 This is largely driven by RSEK's matrix generator. Though not exactly implemented with parity.
 
-![src/img/phBbxid.png](src/img/phBbxid.png)
+![src/img/phBbxid.png](public/img/phBbxid.png)
 
 ### Example:
 
@@ -502,7 +502,7 @@ Every time a Foe is found to share a tag it is added to a list, so, in this case
 
 With default tags, and a Wild Frozen Cavern a total of **200** denizens are added to the list:
 
-![src/img/nbAWYNJ.png](src/img/nbAWYNJ.png)
+![src/img/nbAWYNJ.png](public/img/nbAWYNJ.png)
 
 This list is then rolled on when populating the matrix. The tag system provides weighting and from this list it is mathematically more probable for `Nightspawn` to be picked than `Wyvern`.
 
@@ -549,7 +549,7 @@ At the bottom of the Card Editors, all the existing cards can be viewed on the p
 
 The moves page is mechanically similar to the Oracles page in that you can click on a table on the left and details will be provided on the right. There are no roll buttons here, and the tables are provided here as a reference to reduce the need to look things up in the book.
 
-**![src/img/Etb113P.png](src/img/Etb113P.png)**
+**![src/img/Etb113P.png](public/img/Etb113P.png)**
 
 ## Roll
 
@@ -561,7 +561,7 @@ The `Roll` button in the `Sidebar` takes you to a simple Dice Roller. This uses 
 
 This companion has a persistent state meaning that you can move between pages and your textboxes wont clear when you return. This is done through your browser's `local storage`. The `Data Management` page allows you to `Reset`, `Load` or `Save` your gamestate at any point.
 
-![src/img/38qkMed.png](src/img/38qkMed.png)
+![src/img/38qkMed.png](public/img/38qkMed.png)
 
 ### Saving and Loading the Game State
 
@@ -575,9 +575,9 @@ The `Reset` button wipes the gamestate back to defaults. This cannot be reversed
 
 This app allows you to save journals as save data in the same way as described above. However, the journal entries can also be exported in a zip file, with each file be saved as a markdown `.md` file. To do this simply click Save Journals. The archive will respect the hierarchy set out in the Journal page and folders will be created for parent documents.
 
-![src/img/FFaBXpd.png](src/img/FFaBXpd.png)
+![src/img/FFaBXpd.png](public/img/FFaBXpd.png)
 
-![src/img/zWlV9Eh.png](src/img/zWlV9Eh.png)
+![src/img/zWlV9Eh.png](public/img/zWlV9Eh.png)
 
 ### Updating Datasworn
 
@@ -593,4 +593,4 @@ The acknowledgement page provides the following information, but it is also here
 
 This app was created by Graham Coulby to serve as a holistic digital companion for the Ironsworn tabletop RPG. This app was not designed to replace the official rules nor was it designed to supersede the work done by Shawn Tomkin.
 
-[![src/img/SIbTgYU.png](src/img/SIbTgYU.png)](https://grahamcoulby.co.uk/)
+[![src/img/SIbTgYU.png](public/img/SIbTgYU.png)](https://grahamcoulby.co.uk/)
