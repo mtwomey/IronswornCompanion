@@ -50,7 +50,7 @@ class Moves extends Component {
                 <div className="row">
                   <div className="col-12 col-lg-4 moves-list">
                     <table className="table table-striped table-hover">
-                      {[...new Set(this.props.moves.map((m) => m.Type))].map((m) => (
+                      {[...new Set(this.props.moves.map((m) => m.Type))].sort().map((m) => (
                         <React.Fragment>
                           <thead className="text-light bg-dark">
                             <th style={{ fontWeight: 100 }}>{m}</th>
@@ -76,7 +76,14 @@ class Moves extends Component {
                           {this.state.selectedMove ? (
                             <React.Fragment>
                               <h6>{this.state.selectedMove.Name}</h6>
-                              <ReactMarkdown id="" plugins={[gfm]}>
+                              <ReactMarkdown id="" plugins={[gfm]} renderers={{
+                                link: (props) => {
+                                  const moveName = props.href.replace(/.*\//, '').replace(/_/g, ' ');
+                                  return <span className="pseudolink" onClick={() => {
+                                    this.setState({ selectedMove: this.props.moves.find(m => { return m.Name === moveName }) })
+                                  }}>{moveName}</span>
+                                }
+                              }}>
                                 {this.state.selectedMove.Text}
                               </ReactMarkdown>
                             </React.Fragment>
@@ -111,7 +118,14 @@ class Moves extends Component {
                         {this.state.selectedMove ? (
                           <React.Fragment>
                             <h6>{this.state.selectedMove.Name}</h6>
-                            <ReactMarkdown id="" plugins={[gfm]}>
+                            <ReactMarkdown id="" plugins={[gfm]} renderers={{
+                              link: (props) => {
+                                const moveName = props.href.replace(/.*\//, '').replace(/_/g, ' ');
+                                return <span className="pseudolink" onClick={() => {
+                                  this.setState({ selectedMove: this.props.moves.find(m => { return m.Name === moveName }) })
+                                }}>{moveName}</span>
+                              }
+                            }}>
                               {this.state.selectedMove.Text}
                             </ReactMarkdown>
                           </React.Fragment>

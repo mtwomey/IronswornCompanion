@@ -261,7 +261,7 @@ class App extends Component {
 
     function changes(object, base) {
       console.log(object, base);
-      return _.transform(object, function (result, value, key) {
+      return _.transform(object, function(result, value, key) {
         if (!_.isEqual(value, base[key]) && !ignoreList.includes(key)) {
           treeMap.push(key);
           result[key] = _.isObject(value) && _.isObject(base[key]) ? changes(value, base[key]) : value;
@@ -288,7 +288,7 @@ class App extends Component {
   compare(a, b) {
     _.reduce(
       a,
-      function (result, value, key) {
+      function(result, value, key) {
         return _.isEqual(value, b[key]) ? result : result.concat(key);
       },
       []
@@ -503,14 +503,13 @@ class App extends Component {
   }
 
   updateMoves() {
-    fetch("https://raw.githubusercontent.com/rsek/datasworn/master/ironsworn_moves.json")
+    fetch("https://raw.githubusercontent.com/rsek/dataforged/main/dist/ironsworn/moves.json")
       .then((r1) => r1.json())
       .then((d1) => {
         let moves = [];
-        d1.Categories.map((c) => {
-          let type = c.Name.replace(" Moves", "").replace("Optional ", "");
+        d1.map((c) => {
           c.Moves.map((m) => {
-            m.Type = type;
+            m.Type = c.Name;
             moves.push(m);
           });
         });
@@ -1101,7 +1100,7 @@ class App extends Component {
                     selectedPlayer={this.getSelectedPlayer()}
                     footerDice={this.state.footerDice}
                     burnMomentum={this.burnMomentum}
-                    // footerDice={this.props.footerDice}
+                  // footerDice={this.props.footerDice}
                   />
                 </Route>
 
